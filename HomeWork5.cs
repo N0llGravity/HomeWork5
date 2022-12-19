@@ -84,3 +84,53 @@ int sum = SumOfNotEvenPositions(array);
 ShowArray(array);                                                                               // для проверки массива 
 Console.WriteLine($"Sum of not even positions is {sum}");
 */
+/*//Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+int[] CreatingArray(int size)
+{
+   int[] array = new int[size];
+
+        for(int i = 0; i < size; i++)
+        {
+            array[i] = new Random().Next(0, 1001);
+        }
+        return array;
+}
+
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length - 1; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.WriteLine($"{array[array.Length - 1]}.");
+}
+
+int[] DiffBetweenMinMax(int[] array)
+{
+    int min = array[0];
+    int max = array[0];
+
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i] < min)
+        min = array[i];
+        if(array[i] > max)
+        max = array[i];
+    }
+    int[] answerArray = new int[2];
+    answerArray[0] = min;
+    answerArray[1] = max;
+    return answerArray;
+}
+
+
+Console.Write("input an array size ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array = CreatingArray(size);
+int[] answerArray = DiffBetweenMinMax(array);
+int diff = answerArray[1] - answerArray[0];
+
+ShowArray(array);                                                                               // для проверки массива 
+Console.Write($"Difference between Largest: {answerArray[1]} and fewest: {answerArray[0]} numbers is {diff}");
+*/
